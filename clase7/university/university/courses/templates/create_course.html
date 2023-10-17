@@ -1,0 +1,8 @@
+<h1>Create a new course</h1>
+
+<h3>Enter the course name:</h3>
+
+<form method="POST">
+  {%csrf_token%} {{form}}
+  <button type="submit">Create</button>
+</form>

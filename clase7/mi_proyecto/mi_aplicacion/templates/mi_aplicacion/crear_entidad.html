@@ -1,0 +1,19 @@
+<!-- mi_aplicacion/templates/mi_aplicacion/crear_entidad.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Crear Entidad</title>
+</head>
+<body>
+    <h1>Crear Nueva Entidad</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'listar_entidades' %}">Volver a la lista de entidades</a>
+</body>
+</html>

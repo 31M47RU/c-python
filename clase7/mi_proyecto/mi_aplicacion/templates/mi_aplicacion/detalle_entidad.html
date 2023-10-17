@@ -1,0 +1,15 @@
+<!-- mi_aplicacion/templates/mi_aplicacion/detalle_entidad.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Detalles de la Entidad</title>
+</head>
+<body>
+    <h1>{{ entidad.nombre }}</h1>
+    <p>{{ entidad.descripcion }}</p>
+    <a href="{% url 'listar_entidades' %}">Volver a la lista de entidades</a>
+</body>
+</html>

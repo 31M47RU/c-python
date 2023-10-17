@@ -1,0 +1,19 @@
+<!-- mi_aplicacion/templates/mi_aplicacion/listar_entidades.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Listar Entidades</title>
+</head>
+<body>
+    <h1>Lista de Entidades</h1>
+    <ul>
+        {% for entidad in entidades %}
+            <li><a href="{% url 'detalle_entidad' entidad.id %}">{{ entidad.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_entidad' %}">Crear Nueva Entidad</a>
+</body>
+</html>
