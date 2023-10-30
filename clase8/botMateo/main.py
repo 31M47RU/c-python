@@ -4,7 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-token = ""
+token_ = "TOKEN.MTE2ODMzMDE2MTM3MzA3MzQyOA.GDUwJd.97VUeN7CWDBpZtnHHFQLN4EPjUodYaL1yxCRfY"
+token = token_.replace("TOKEN.", "")
 
 intents = discord.Intents.all()
 bot = commands.Bot(
