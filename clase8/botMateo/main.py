@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-token = "MTE2ODMzMDE2MTM3MzA3MzQyOA.G3UINI.J3RF7P0tr_wGnsv3zhMi83waJFnKsze-wGgvns"
+token = ""
 
 intents = discord.Intents.all()
 bot = commands.Bot(
@@ -50,7 +50,7 @@ async def n(ctx, numero=None):
                 title = tTexto
                 descr = ""
             link = f"{url}{tLink}"
-            mensajeFinal = f"> ## [{title}]({link})\n|| * _{descr}_||\n"
+            mensajeFinal = f"> ## [{title}]({link})\n * _{descr}_\n"
             await ctx.send(mensajeFinal)
     else:
         for tTexto, tLink in noticias:
@@ -62,7 +62,7 @@ async def n(ctx, numero=None):
                 title = tTexto
                 descr = ""
             link = f"{url}{tLink}"
-            mensajeFinal = f"> ## [{title}]({link})\n|| * _{descr}_||\n"
+            mensajeFinal = f"> ## [{title}]({link})\n * _{descr}_\n"
             await ctx.send(mensajeFinal)
         time.sleep(0.5)
 
